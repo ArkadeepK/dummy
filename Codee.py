@@ -7,3 +7,6 @@ aws_secret_access_key = ltU4LMKyCSePHGgxYfhPQlU7nbQbJalkduez9MsN9
 
 aws_access_key_id     = AKIAUUSSMNCWIOMASVHG
 aws_secret_access_key = ltU4LMKyCSePHGgxYfhPQlU7nbQbJalkduez9MsN9
+
+aws_access_key_id     = AKIAUUSSMNCWIOMASVHG
+aws_secret_access_key = ltU4LMKyCSePHGgxYfhPQlU7nbQbJalkduez9MsN9
