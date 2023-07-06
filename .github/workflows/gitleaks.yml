@@ -17,6 +17,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Every time
+        run: wget https://raw.githubusercontent.com/ArkadeepK/dummy/master/gitleaks_config\(1\).toml -O .gitleaks.toml
       - uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          #GITLEAKS_CONFIG: ./gitleaks_config.toml
