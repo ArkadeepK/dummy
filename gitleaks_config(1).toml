@@ -1,0 +1,125 @@
+title = "Gitleaks config test"
+
+[extend]
+
+useDefault = true
+
+[[rules]]
+description = "Amazon MWS Auth Token"
+id = "Amazon-MWS-Auth-Token"
+regex = '''amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'''
+secretGroup = 0
+
+[[rules]]
+description = "AMP VPN (engine-vpn)"
+id = "AMP-VPN"
+regex = '''(?i).{0,128}ENGINE-VPN.{0,128}'''
+secretGroup = 0
+
+[[rules]]
+description = "Authorization header"
+id = "Authorization-header"
+regex = '''Authorization:.{0,60}'''
+secretGroup = 0
+
+[[rules]]
+description = "AWS API Key"
+id = "AWS-API-Key"
+regex = '''AKIA[0-9A-Z]{16}'''
+secretGroup = 0
+
+[[rules]]
+description = "AWS Bearer token"
+id = "AWS-Bearer-token"
+regex = '''ABIA[0-9A-Z]{16}'''
+secretGroup = 0
+
+[[rules]]
+description = "Azure Client ID"
+id = "Azure-Client-ID"
+regex = '''(ARM_CLIENT_ID\\s{0,8}=\\s{0,8}[\"'a-zA-Z0-9-_]{36})'''
+secretGroup = 0
+
+[[rules]]
+description = "Azure Client Secret"
+id = "Azure-Client-Secret"
+regex = '''(ARM_CLIENT_SECRET\\s{0,8}=\\s{0,8}[\"'a-zA-Z0-9-_]{36})'''
+secretGroup = 0
+
+[[rules]]
+description = "cisco123"
+id = "cisco123"
+regex = '''(?i).{0,128}[c][i1][s5][c][o0][1!][2@][3#].{0,128}'''
+secretGroup = 0
+
+[[rules]]
+description = "CLI -p"
+id = "CLI-p"
+regex = '''[a-z]{0,128} .{0,512}? -p.{0,128}'''
+secretGroup = 0
+
+[[rules]]
+description = "CLI --p"
+id = "CLI--p"
+regex = '''[a-z]{0,128} .{0,512}? --password.{0,128}'''
+secretGroup = 0
+
+[[rules]]
+description = "curl"
+id = "curl"
+regex = '''curl.{0,512}? -u.{0,128}'''
+secretGroup = 0
+
+[[rules]]
+description = "Facebook Access Token"
+id = "Facebook-Access-Token"
+regex = '''EAACEdEose0cBA[0-9A-Za-z].{0,128}'''
+secretGroup = 0
+
+[[rules]]
+description = "Facebook Oauth"
+id = "Facebook-Oauth"
+regex = '''[f|F][a|A][c|C][e|E][b|B][o|O][o|O][k|K].{0,512}['|\"][0-9a-f]{32}['|\"]'''
+secretGroup = 0
+
+[[rules]]
+description = "Generic API Key"
+id = "Generic-API-Key"
+regex = '''[a|A][p|P][i|I][_]?[k|K][e|E][y|Y].{0,512}['|\"][0-9a-zA-Z]{32,45}['|\"]'''
+secretGroup = 0
+
+[[rules]]
+description = "Generic AppSecret"
+id = "Generic-AppSecret"
+regex = '''[a|A][p|P][p|P][s|S][e|E][c|C][r|R][e|E][t|T].{0,512}.[0-9a-zA-Z]{32,45}'''
+secretGroup = 0
+
+[[rules]]
+description = "Generic Password"
+id = "Generic-Password"
+regex = '''.{0,128}[p|P][a|A][s|S][s|S][w|W][o|O][r|R][d|D].{0,4}=.{0,128}'''
+secretGroup = 0
+
+[[rules]]
+description = "Generic Secret"
+id = "Generic-Secret"
+regex = '''[s|S][e|E][c|C][r|R][e|E][t|T].{0,128}['|\"][0-9a-zA-Z]{32,45}['|\"]'''
+secretGroup = 0
+
+[[rules]]
+description = "GitHub 2"
+id = "GitHub-2"
+regex = '''[g|G][i|I][t|T][h|H][u|U][b|B].{0,512}[c|C][l|L][i|I][e|E][n|N][T|T][s|S][e|E][c|C][r|R][e|E][t|T].{0,512}[0-9a-zA-Z]{35,40}'''
+secretGroup = 0
+
+[[rules]]
+description = "GitHub"
+id = "GitHub"
+regex = '''[g|G][i|I][t|T][h|H][u|U][b|B].{0,512}['|\"][0-9a-zA-Z]{35,40}['|\"]'''
+secretGroup = 0
+
+[[rules]]
+description = "Google API Key"
+id = "Google-API-Key"
+regex = '''AIza[0-9A-Za-z\\-_]{35}'''
+secretGroup = 0
